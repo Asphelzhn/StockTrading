@@ -114,9 +114,6 @@
 			</div>
 		</div>
 	</form>
-	<footer>
-		<div id="fd1" align="center">Copyright 2014 Shengze Wei. All
-			rights reserved.</div>
-	</footer>
+	
 </body>
 </html>

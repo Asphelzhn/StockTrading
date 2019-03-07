@@ -101,8 +101,6 @@
 			</div>
 		</div>
 	</form>
-	<footer>
-		<div id="fd1" align="center"></div>
-	</footer>
+	
 </body>
 </html>
