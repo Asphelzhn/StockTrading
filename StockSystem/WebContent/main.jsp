@@ -49,11 +49,7 @@
 						<tr>
 							<td colspan="2" nowrap class="tdc">&nbsp;</td>
 						</tr>
-						<tr>
-							<td colspan="2" nowrap class="tdc">
-								<a href="<%=path%>/servlet/StockChartServlet">股价趋势查询</a>
-							</td>
-						</tr>
+						
 						<tr>
 							<td colspan="2" nowrap class="tdc">
 								<a href="<%=path%>/servlet/PricePageQueryServlet">实时股价查询</a>

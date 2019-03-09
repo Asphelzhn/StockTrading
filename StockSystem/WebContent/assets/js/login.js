@@ -1,21 +1,18 @@
-/**
- * Designed by Shengze Wei in Chongqing Coded in Fuling Copyright 2014 Shengze
- * Wei. All rights reserved.
- */
+
 function check() {
 	var userid = document.getElementById("userid").value;
 	var password = document.getElementById("password").value;
 	var rand = document.getElementById("rand").value;
 	if (userid.length == 0) {
-		alert("ÇëÊäÈëÕËºÅ£¡");
+		alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ËºÅ£ï¿½");
 		return false;
 	}
 	if (password.length == 0) {
-		alert("ÇëÊäÈëÃÜÂë£¡");
+		alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¡");
 		return false;
 	}
 	if (rand.length == 0) {
-		alert("ÇëÊäÈëÑéÖ¤Âë£¡");
+		alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ë£¡");
 		return false;
 	}
 }

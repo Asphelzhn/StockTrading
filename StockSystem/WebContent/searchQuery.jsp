@@ -25,11 +25,7 @@
 					</span>
 				</h1>
 				<table border="0" id="con">
-					<tr>
-						<td colspan="3" nowrap class="tdc"><span id="sp">实时股价查询</span>
-						</td>
-
-					</tr>
+				
 					<tr>
 						<td width="195" nowrap class="tdc"><span id="sp">股票编码</span>
 						</td>
@@ -37,6 +33,9 @@
 						</td>
 						<td width="196" nowrap class="tdc"><span id="sp">最新单价</span>
 						</td>
+						<td width="196" nowrap class="tdc"><input type="button"class="sm" value="股票趋势"  onclick="javascript:location.href='<%=path%>/servlet/StockChartServlet'"/></td>
+						</td>
+						
 					</tr>
 					<%
 						List<StockInfoBean> list = (List<StockInfoBean>) request

@@ -1,7 +1,4 @@
-/**
- * Designed by Shengze Wei in Chongqing Coded in Fuling Copyright 2014 Shengze
- * Wei. All rights reserved.
- */
+
 function check() {
 	var userid = document.getElementById("userid").value;
 	var password = document.getElementById("password").value;
@@ -11,43 +8,43 @@ function check() {
 	var email = document.getElementById("email").value;
 	var telephone = document.getElementById("telephone").value;
 	if (userid.length == 0) {
-		alert("ÇëÊäÈëÕËºÅ£¡");
+		alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ËºÅ£ï¿½");
 		return false;
 	}
 	if (password.length == 0) {
-		alert("ÇëÊäÈëÃÜÂë£¡");
+		alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¡");
 		return false;
 	}
 	if (passwordag.length == 0) {
-		alert("ÇëÊäÈëÈ·ÈÏÃÜÂë£¡");
+		alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ë£¡");
 		return false;
 	}
 	if (name.length == 0) {
-		alert("ÇëÊäÈëĞÕÃû£¡");
+		alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		return false;
 	}
 	if (sex[0].checked == false && sex[1].checked == false) {
-		alert("ÇëÑ¡ÔñĞÔ±ğ£¡");
+		alert("ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ô±ï¿½");
 		return false;
 	}
 	if (email.length == 0) {
-		alert("ÇëÊäÈëµç×ÓÓÊÏä£¡");
+		alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä£¡");
 		return false;
 	}
 	if (telephone.length == 0) {
-		alert("ÇëÊäÈëµç»°ºÅÂë£¡");
+		alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç»°ï¿½ï¿½ï¿½ë£¡");
 		return false;
 	}
 	if (password != passwordag) {
-		alert("Á½´ÎÃÜÂëÊäÈë²»Ò»ÖÂ£¡");
+		alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²»Ò»ï¿½Â£ï¿½");
 		return false;
 	}
 	if (!checkEmail(email)) {
-		alert("µç×ÓÓÊÏäÊäÈë²»ºÏ·¨£¡");
+		alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²»ï¿½Ï·ï¿½ï¿½ï¿½");
 		return false;
 	}
 	if (!checkTel(telephone)) {
-		alert("µç»°ºÅÂëÊäÈë²»ºÏ·¨£¡");
+		alert("ï¿½ç»°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²»ï¿½Ï·ï¿½ï¿½ï¿½");
 		return false;
 	}
 }

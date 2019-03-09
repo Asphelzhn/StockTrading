@@ -32,7 +32,7 @@
 					<tr>
 						<td colspan="4" nowrap class="tdc"><input type="text"
 							class="maintext" name="queryKey" id="queryKey"
-							placeholder="请输入股票名称、拼音缩写或编码查询" /> <input type="submit"
+							placeholder="请输入股票名称或代码查询" /> <input type="submit"
 							class="sm" value="查询" /></td>
 					</tr>
 					<tr>
@@ -53,8 +53,7 @@
 					</tr>
 					<%
 						Integer pageTotal = (Integer) request.getAttribute("pageTotal"); // 总的页数
-						List<StockInfoBean> list = (List<StockInfoBean>) request
-								.getAttribute("list"); //查询的记录信息
+						List<StockInfoBean> list = (List<StockInfoBean>) request.getAttribute("list"); //查询的记录信息
 						if (list != null) {
 							for (int i = 0; i < list.size(); i++) { // 对记录信息做循环显示
 								StockInfoBean si = (StockInfoBean) list.get(i);
