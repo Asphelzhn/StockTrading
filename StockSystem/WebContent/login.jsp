@@ -5,7 +5,9 @@
 %>
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <title>登陆页面--股票交易系统</title>
 <link rel="stylesheet" href="<%=path%>/assets/css/styles.css">
 <script language="javascript">
@@ -32,6 +34,12 @@
 </script>
 </head>
 <body>
+ <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+        
 	<form method="post" action="LoginServlet">
 		<div id="umain">
 			<h1>股票交易系统</h1>
@@ -64,5 +72,9 @@
 	<footer>
 		<div id="fd1" align="center"></div>
 	</footer>
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>

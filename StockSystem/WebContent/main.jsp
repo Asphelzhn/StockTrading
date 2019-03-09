@@ -36,7 +36,7 @@
 							<td colspan="2" nowrap class="tdc">您的账户资金</td>
 						</tr>
 						<tr>
-							<td colspan="2" nowrap class="tdc"><%=uib.getAccountBalance()%></td>
+							<td colspan="2" nowrap class="tdc"><%=uib.getAccountBalance()%>元</td>
 						</tr>
 						<tr>
 							<td colspan="2" nowrap class="tdc">&nbsp;</td>
@@ -48,6 +48,11 @@
 						</tr>
 						<tr>
 							<td colspan="2" nowrap class="tdc">&nbsp;</td>
+						</tr>
+						<tr>
+							<td colspan="2" nowrap class="tdc">
+								<a href="<%=path%>/servlet/StockChartServlet">股价趋势查询</a>
+							</td>
 						</tr>
 						<tr>
 							<td colspan="2" nowrap class="tdc">
@@ -89,8 +94,7 @@
 							<td width="86" nowrap class="tdc">相关操作</td>
 						</tr>
 						<%
-						List<StockInfoBean> list = (List<StockInfoBean>) request
-								.getAttribute("ownlist"); //查询的记录信息
+						List<StockInfoBean> list = (List<StockInfoBean>) request.getAttribute("ownlist"); //查询的记录信息
 						if (list != null) {
 							for (int i = 0; i < list.size(); i++) { // 对记录信息做循环显示
 								StockInfoBean si = (StockInfoBean) list.get(i);
