@@ -47,6 +47,16 @@
 		<servlet-name>LogoutServlet</servlet-name>
 		<url-pattern>/servlet/LogoutServlet</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>StockChartServlet</servlet-name>
+		<servlet-class>com.stock.servlet.StockChartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockChartServlet</servlet-name>
+		<url-pattern>/servlet/StockChartServlet</url-pattern>
+	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>PricePageQueryServlet</servlet-name>
 		<servlet-class>com.stock.servlet.PricePageQueryServlet</servlet-class>
@@ -55,6 +65,7 @@
 		<servlet-name>PricePageQueryServlet</servlet-name>
 		<url-pattern>/servlet/PricePageQueryServlet</url-pattern>
 	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>ChargeAccountServlet</servlet-name>
 		<servlet-class>com.stock.servlet.ChargeAccountServlet</servlet-class>
