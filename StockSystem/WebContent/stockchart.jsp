@@ -35,18 +35,35 @@
 					</span>
 				</h1>
 			</div>
-			
+            <%
+                List<StockInfoBean> list = (List<StockInfoBean>) request
+                        .getAttribute("list"); //查询的记录信息
+                if (list != null) {
+                    for (int i = 0; i < list.size(); i++) { // 对记录信息做循环显示
+                        StockInfoBean si = (StockInfoBean) list.get(i);
+                        String stock_id = si.getStockid();
+                        String imgpath = "http://image.sinajs.cn/newchart/min/n/" + stock_id +".gif";
+            %>
 
 			<br /> 
 			<div align="right">
-						<button type="button" class="btn btn-success" onclick="changeImg_min();">分时</button>
-						<button type="button" class="btn btn-success" onclick="changeImg_day();">日</button>
-						<button type="button" class="btn btn-primary" onclick="changeImg_week();">周</button>
-						<button type="button" class="btn btn-primary" onclick="changeImg_month();">月</button>
+						<button type="button" class="btn btn-success" onclick="changeImg_min(<%=stock_id%>);">分时</button>
+						<button type="button" class="btn btn-success" onclick="changeImg_day(<%=stock_id%>);">日</button>
+						<button type="button" class="btn btn-primary" onclick="changeImg_week(<%=stock_id%>);">周</button>
+						<button type="button" class="btn btn-primary" onclick="changeImg_month(<%=stock_id%>);">月</button>
+                        <button type="button" class="btn btn-primary" onclick="changeImg_year(<%=stock_id%>);">年</button>
 			</div>
-			<br /> 
-			
-			<img alt="股票日线图" src="http://image.sinajs.cn/newchart/min/n/sh000001.gif" align="middle" id="chart">
+			<br />
+
+
+            <tr>
+                <img alt="股票日线图" src=<%=imgpath%> align="middle" id="chart">
+            </tr>
+            <%
+                    }
+                }
+            %>
+
 		</div>
 	</form>
 	
