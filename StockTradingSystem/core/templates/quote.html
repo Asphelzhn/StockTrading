@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-1 text-muted">
+                        <span>Dashboard</span>
+                        <a class="d-flex align-items-center text-muted" href="{{ url_for('dashboard.show_dashboard') }}">
+                            <span data-feather="monitor"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard.show_dashboard') }}">
+                                <span data-feather="home"></span>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard.show_balance') }}">
+                                <span data-feather="dollar-sign"></span>
+                                Balance
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard.show_buy') }}">
+                                <span data-feather="plus-square"></span>
+                                Buy
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard.show_sell') }}">
+                                <span data-feather="minus-square"></span>
+                                Sell
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard.show_lookup') }}">
+                                <span data-feather="search"></span>
+                                Lookup
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="">
+                                <span data-feather="bar-chart-2"></span>
+                                Quote
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard.show_portfolio') }}">
+                                <span data-feather="folder"></span>
+                                Portfolio
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>About Us</span>
+                        <a class="d-flex align-items-center text-muted" href="https://github.com/Asphelzhn/StockTrading" target="_blank">
+                            <span data-feather="heart"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/Asphelzhn/StockTrading" target="_blank">
+                                <span data-feather="github"></span>
+                                GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Quote</h1>
+                </div>
+
+                <form class="form" method="POST">
+                    <div class="text-center mb-4">
+                        <p>Enter a ticker symbol (e.g., MSFT) to get a quote for its current stock price.</p>
+
+                        {% if response %}
+                        <div style="line-height: 6px;">
+                        {% for line in response %}
+                            {% if not "Sorry" in line %}
+                                {% if line.isupper() %}
+                                    {% set stock_id = ticker_symbol.ticker_symbol %}
+{#                                    {% print(stock_id) %}#}
+                                    {% set imgpath = "http://image.sinajs.cn/newchart/v5/usstock/min/"+ stock_id  + ".gif" %}
+{#                                    {% print(imgpath) %}#}
+                                    <p style="font-size: 20px; color: black;"><b>Ticker symbol:</b> {{ line }}</p>
+                                {% else %}
+                                    <p style="font-size: 20px; color: red;"><b>Current stock price:</b> {{ line }}$</p>
+                                {% endif %}
+                            {% else %}
+                            <p style="font-size: 12px; color: red;">{{ line }}</p>
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+            
+                    <div class="form-label-group">
+                        <input name="ticker-symbol" type="text" id="input-ticker-symbol" class="form-control" placeholder="Ticker Symbol" required autofocus>
+                        <label for="input-ticker-symbol">Ticker Symbol</label>
+                    </div>
+            
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Get Quote</button>
+
+                    <br />
+
+                    {% if response %}
+                        {% for line in response %}
+                            {% if not "Sorry" in line %}
+                                {% set stock_id = ticker_symbol.ticker_symbol %}
+{#                                    {% print(stock_id) %}#}
+                                {% set imgpath = "http://image.sinajs.cn/newchart/v5/usstock/min/"+ stock_id  + ".gif" %}
+{#                                    {% print(imgpath) %}#}
+                                <div align="right">
+                                    <script src="/static/changeImg.js"></script>
+                                    <button type="button" class="btn btn-success" onclick="changeImg_min({{ stock_id }});">分时</button>
+						            <button type="button" class="btn btn-success" onclick="changeImg_day({{ stock_id }});">日</button>
+						            <button type="button" class="btn btn-primary" onclick="changeImg_week({{ stock_id }});">周</button>
+						            <button type="button" class="btn btn-primary" onclick="changeImg_month({{ stock_id }});">月</button>
+			                    </div>
+			                    <br />
+
+                                <tr>
+{#                                {% print(imgpath) %}#}
+                                <img alt="Stock Trend" src= {{ imgpath }} align="middle" id="chart">
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </form>
+            </main>
+        </div>
+    </div>
+{% endblock %}

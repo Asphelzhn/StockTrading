@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-1 text-muted">
+                        <span>Dashboard</span>
+                        <a class="d-flex align-items-center text-muted" href="{{ url_for('dashboard.show_dashboard') }}">
+                            <span data-feather="monitor"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard.show_dashboard') }}">
+                                <span data-feather="home"></span>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard.show_balance') }}">
+                                <span data-feather="dollar-sign"></span>
+                                Balance
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard.show_buy') }}">
+                                <span data-feather="plus-square"></span>
+                                Buy
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard.show_sell') }}">
+                                <span data-feather="minus-square"></span>
+                                Sell
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard.show_lookup') }}">
+                                <span data-feather="search"></span>
+                                Lookup
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard.show_quote') }}">
+                                <span data-feather="bar-chart-2"></span>
+                                Quote
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ url_for('dashboard.show_portfolio') }}">
+                                <span data-feather="folder"></span>
+                                Portfolio
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>About Us</span>
+                        <a class="d-flex align-items-center text-muted" href="https://github.com/Asphelzhn/StockTrading" target="_blank">
+                            <span data-feather="heart"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/Asphelzhn/StockTrading" target="_blank">
+                                <span data-feather="github"></span>
+                                GitHub
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Portfolio</h1>
+                    <div class="btn-group">
+                        <a href="{{ url_for('dashboard.show_portfolio') }}" class="btn btn-sm btn-outline-secondary">
+                            <span data-feather="refresh-cw"></span>
+                            Refresh
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div style="line-height: 12px">
+                        <p><b>Liquid balance:</b> ${{ balance }}</p>
+                        <p><b>Estimated earnings in portfolio:</b> ${{ earnings }}</p>
+                        <p><b>Estimated total balance:</b> ${{ total }}</p>
+                    </div>
+                </div>
+                <center>
+                    {% if portfolio == "empty" %}
+                        <h4 style="color: #e74c3c;">There is no stock in your portfolio to display.</h4>
+                        <h4 style="color: #e74c3c;">Navigate to the <a href="{{ url_for('dashboard.show_buy') }}">Buy menu</a> to execute a trade.</h4>
+                    {% else %}
+                    {{ portfolio | safe }}
+                    {% endif %}
+                </center>
+            </main>
+        </div>
+    </div>
+{% endblock %}
