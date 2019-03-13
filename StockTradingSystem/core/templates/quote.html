@@ -113,32 +113,59 @@
                     <button class="btn btn-lg btn-primary btn-block" type="submit">Get Quote</button>
 
                     <br />
-
                     {% if response %}
                         {% for line in response %}
+{#                            {% print(line) %}#}
                             {% if not "Sorry" in line %}
                                 {% set stock_id = ticker_symbol.ticker_symbol %}
 {#                                    {% print(stock_id) %}#}
                                 {% set imgpath = "http://image.sinajs.cn/newchart/v5/usstock/min/"+ stock_id  + ".gif" %}
-{#                                    {% print(imgpath) %}#}
-                                <div align="right">
-                                    <script src="/static/changeImg.js"></script>
-                                    <button type="button" class="btn btn-success" onclick="changeImg_min({{ stock_id }});">分时</button>
-						            <button type="button" class="btn btn-success" onclick="changeImg_day({{ stock_id }});">日</button>
-						            <button type="button" class="btn btn-primary" onclick="changeImg_week({{ stock_id }});">周</button>
-						            <button type="button" class="btn btn-primary" onclick="changeImg_month({{ stock_id }});">月</button>
-			                    </div>
-			                    <br />
-
-                                <tr>
 {#                                {% print(imgpath) %}#}
-                                <img alt="Stock Trend" src= {{ imgpath }} align="middle" id="chart">
-                                </tr>
-                            {% endif %}
+                                    <div align="right">
+                                        <button type="button" class="btn btn-success" onclick="changeImg_min('{{stock_id }}');">分时</button>
+                                        <button type="button" class="btn btn-success" onclick="changeImg_day('{{ stock_id }}');">日</button>
+                                        <button type="button" class="btn btn-primary" onclick="changeImg_week('{{ stock_id }}');">周</button>
+                                        <button type="button" class="btn btn-primary" onclick="changeImg_month('{{ stock_id }}');">月</button>
+                                    </div>
+                                    <br />
+
+                                    <tr>
+    {#                                {% print(imgpath) %}#}
+                                    <img alt="Stock Trend" src= {{ imgpath }} align="middle" id="chart">
+                                    </tr>
+                                {% endif %}
                         {% endfor %}
+
                     {% endif %}
                 </form>
             </main>
         </div>
     </div>
+{#    <script src = "{{url_for('static',filename = 'changeImg.js')}}"></script>#}
+    <script>
+    function changeImg_min(stockid) {
+    var obj = document.getElementById("chart");
+    var url = "http://image.sinajs.cn/newchart/v5/usstock/min/" + stockid + ".gif"
+    obj.setAttribute("src", url);
+}
+
+function changeImg_day(stockid) {
+    var obj = document.getElementById("chart");
+    var url = "http://image.sinajs.cn/newchart/usstock/daily/"+stockid+".gif"
+    obj.setAttribute("src", url);
+    console.log("done")
+}
+
+function changeImg_week(stockid) {
+    var obj = document.getElementById("chart");
+    var url = "http://image.sinajs.cn/newchart/usstock/weekly/"+stockid+".gif"
+    obj.setAttribute("src", url);
+}
+
+function changeImg_month(stockid) {
+    var obj = document.getElementById("chart");
+    var url = "http://image.sinajs.cn/newchart/usstock/monthly/"+stockid+".gif"
+    obj.setAttribute("src", url);
+}
+    </script>
 {% endblock %}

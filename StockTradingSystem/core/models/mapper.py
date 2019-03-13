@@ -48,7 +48,7 @@ def create_account(username, password):
 # Logs in to account in users database table.
 def login(username, password):
 	if not username_exists(username):
-		return ["Sorry, no account exists with that username.", "Please sign up for a StockTradingSystem account to log in."]
+		return ["Sorry, no account exists with that username.", "Please sign up for a StockOnline account to log in."]
 	elif not account_exists(username, password):
 		return ["Sorry, the password you entered was incorrect."]
 	elif is_admin(username, password):
