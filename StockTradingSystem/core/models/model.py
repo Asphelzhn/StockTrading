@@ -18,10 +18,11 @@ def buy(ticker_symbol, trade_volume, username):
 	if last_price == "exit":
 		return ["Sorry, the ticker symbol you entered does not exist."]
 	balance = mapper.get_balance(username)
-	brokerage_fee = 6.95
+	# brokerage_fee = 6.95
 	# Error handling: if the user enters a trade volume that is not a number.
 	try:
-		transaction_cost = last_price * float(trade_volume) + brokerage_fee
+		# transaction_cost = last_price * float(trade_volume) + brokerage_fee
+		transaction_cost = last_price * float(trade_volume)
 	except ValueError:
 		return ["Sorry, the trade volume you entered is invalid."]
 	# Error handling: if the user enters a trade volume that is negative or 0.
@@ -74,10 +75,11 @@ def sell(ticker_symbol, trade_volume, username):
 	# Error handling: if the user enters a ticker symbol that does not exist.
 	if last_price == "exit":
 		return ["Sorry, the ticker symbol you entered does not exist."]
-	brokerage_fee = 6.95
+	# brokerage_fee = 6.95
 	# Error handling: if the user enters a trade volume that is not a number.
 	try:
-		balance_to_add = last_price * float(trade_volume) - brokerage_fee
+		# balance_to_add = last_price * float(trade_volume) - brokerage_fee
+		balance_to_add = last_price * float(trade_volume)
 	except ValueError:
 		return ["Sorry, the trade volume you entered is invalid."]
 	# Error handling: if the user enters a trade volume that is negative or 0.
@@ -128,7 +130,7 @@ def lookup(company_name):
 	if response == "exit":
 		return ["Sorry, the company name you entered does not have a ticker symbol."]
 	else:
-		return [company_name.lower().capitalize(), response]
+		return [company_name, response]
 
 # Quote
 def quote(ticker_symbol):

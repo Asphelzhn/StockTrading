@@ -10,7 +10,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/run$run.coverage" NAME="run Coverage Results" MODIFIED="1552376918697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/StockTradingSystem$run.coverage" NAME="run Coverage Results" MODIFIED="1552480770193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/StockTradingSystem$run.coverage" NAME="run Coverage Results" MODIFIED="1552525234050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -49,14 +49,78 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/models/database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              <folding>
+                <element signature="e#25#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/models/mapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="-662">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding>
                 <element signature="e#25#40#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/models/model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4016">
+              <caret line="81" column="57" selection-start-line="81" selection-start-column="57" selection-end-line="81" selection-end-column="57" />
+              <folding>
+                <element signature="e#25#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/templates/buy.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="85" column="61" lean-forward="true" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="61" />
+              <folding>
+                <element signature="e#4632#4670#0#HTML" expanded="true" />
+                <element signature="e#4756#4792#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/templates/sell.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="85" column="61" selection-start-line="85" selection-start-column="61" selection-end-line="85" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/users">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/orders">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -71,7 +135,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/sqlite_sequence">
+        <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/stock">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -80,76 +144,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/models/database.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#25#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/controllers/dashboard.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-857">
-              <caret line="150" column="53" selection-start-line="150" selection-start-column="53" selection-end-line="150" selection-end-column="53" />
-              <folding>
-                <element signature="e#25#113#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/models/model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="239" column="19" selection-start-line="239" selection-start-column="19" selection-end-line="239" selection-end-column="19" />
-              <folding>
-                <element signature="e#25#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/models/wrapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="21" />
+            <state relative-caret-position="600">
+              <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
               <folding>
                 <element signature="e#25#36#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/40b9b37d-8d0e-49bc-9417-9a77fa821d7b/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/templates/quote.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/templates/admin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2910">
-              <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -177,6 +178,7 @@
       <find>response</find>
       <find>ticker_symbol</find>
       <find>StockTradingSystem</find>
+      <find>lookup</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -186,9 +188,6 @@
         <option value="$PROJECT_DIR$/wsgi.py" />
         <option value="$PROJECT_DIR$/core/__init__.py" />
         <option value="$PROJECT_DIR$/core/templates/portfolio.html" />
-        <option value="$PROJECT_DIR$/core/templates/sell.html" />
-        <option value="$PROJECT_DIR$/core/templates/buy.html" />
-        <option value="$PROJECT_DIR$/core/templates/balance.html" />
         <option value="$PROJECT_DIR$/core/templates/admin-withdraw.html" />
         <option value="$PROJECT_DIR$/core/templates/admin-set.html" />
         <option value="$PROJECT_DIR$/core/templates/admin-portfolio-user.html" />
@@ -197,24 +196,29 @@
         <option value="$PROJECT_DIR$/core/templates/admin-deposit.html" />
         <option value="$PROJECT_DIR$/core/templates/admin-balance.html" />
         <option value="$PROJECT_DIR$/core/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/core/templates/lookup.html" />
         <option value="$PROJECT_DIR$/core/static/changeImg.js" />
         <option value="$PROJECT_DIR$/core/controllers/dashboard.py" />
         <option value="$PROJECT_DIR$/core/templates/404.html" />
-        <option value="$PROJECT_DIR$/core/models/mapper.py" />
         <option value="$PROJECT_DIR$/core/templates/login.html" />
         <option value="$PROJECT_DIR$/core/templates/base.html" />
         <option value="$PROJECT_DIR$/core/templates/admin-users.html" />
         <option value="$PROJECT_DIR$/core/templates/signup.html" />
-        <option value="$PROJECT_DIR$/core/templates/quote.html" />
         <option value="$PROJECT_DIR$/core/templates/admin.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/40b9b37d-8d0e-49bc-9417-9a77fa821d7b/console.sql" />
+        <option value="$PROJECT_DIR$/core/models/mapper.py" />
+        <option value="$PROJECT_DIR$/core/templates/lookup.html" />
+        <option value="$PROJECT_DIR$/core/templates/balance.html" />
+        <option value="$PROJECT_DIR$/core/templates/quote.html" />
+        <option value="$PROJECT_DIR$/core/models/wrapper.py" />
+        <option value="$PROJECT_DIR$/core/templates/buy.html" />
+        <option value="$PROJECT_DIR$/core/templates/sell.html" />
+        <option value="$PROJECT_DIR$/core/models/model.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="110" />
-    <option name="y" value="147" />
+    <option name="y" value="145" />
     <option name="width" value="1440" />
     <option name="height" value="775" />
   </component>
@@ -223,6 +227,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,7 +244,19 @@
               <item name="StockTradingSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="StockTradingSystem" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StockTradingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StockTradingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StockTradingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StockTradingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StockTradingSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -250,7 +267,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -326,11 +342,15 @@
       <workItem from="1552377398728" duration="4961000" />
       <workItem from="1552406865648" duration="3288000" />
       <workItem from="1552474360347" duration="9060000" />
+      <workItem from="1552490260764" duration="1815000" />
+      <workItem from="1552519894186" duration="2222000" />
+      <workItem from="1552522187554" duration="2277000" />
+      <workItem from="1552524556673" duration="1040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45032000" />
+    <option name="totallyTimeSpent" value="52386000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -345,12 +365,12 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15884718" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16689008" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.52899575" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41442716" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -366,7 +386,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.10455764" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.10053619" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.13873994" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,20 +448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2070">
           <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/sell.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/balance.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -532,13 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/lookup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2940">
-          <caret line="98" column="39" selection-start-line="98" selection-start-column="39" selection-end-line="98" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/controllers/login.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -563,31 +562,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/buy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2220">
-          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="2291" selection-start-line="2291" selection-end-line="2291" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/orders">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -622,34 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/quote.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2910">
-          <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/40b9b37d-8d0e-49bc-9417-9a77fa821d7b/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/holdings">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/list">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -671,16 +621,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/stock">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/controllers/dashboard.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-857">
+        <state relative-caret-position="4440">
           <caret line="150" column="53" selection-start-line="150" selection-start-column="53" selection-end-line="150" selection-end-column="53" />
           <folding>
             <element signature="e#25#113#0" expanded="true" />
@@ -688,42 +631,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/models/database.py">
+    <entry file="file://$PROJECT_DIR$/core/templates/lookup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#25#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2820">
+          <caret line="94" column="109" selection-start-line="94" selection-start-column="109" selection-end-line="94" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/40b9b37d-8d0e-49bc-9417-9a77fa821d7b/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/quote.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3990">
+          <caret line="133" column="44" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/balance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2640">
+          <caret line="88" column="40" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2910">
+          <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/orders">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/holdings">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/models/wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="21" />
+        <state relative-caret-position="600">
+          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
           <folding>
             <element signature="e#25#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/models/model.py">
+    <entry file="file://$PROJECT_DIR$/core/models/database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="239" column="19" selection-start-line="239" selection-start-column="19" selection-end-line="239" selection-end-column="19" />
+        <state relative-caret-position="210">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding>
-            <element signature="e#25#56#0" expanded="true" />
+            <element signature="e#25#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/models/mapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="-662">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding>
             <element signature="e#25#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://40b9b37d-8d0e-49bc-9417-9a77fa821d7b/schema/main/table/stock">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/buy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="85" column="61" lean-forward="true" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="61" />
+          <folding>
+            <element signature="e#4632#4670#0#HTML" expanded="true" />
+            <element signature="e#4756#4792#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/sell.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="85" column="61" selection-start-line="85" selection-start-column="61" selection-end-line="85" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/models/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4016">
+          <caret line="81" column="57" selection-start-line="81" selection-start-column="57" selection-end-line="81" selection-end-column="57" />
+          <folding>
+            <element signature="e#25#56#0" expanded="true" />
           </folding>
         </state>
       </provider>

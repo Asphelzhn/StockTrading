@@ -9,6 +9,17 @@ import time
 
 import pandas as pd
 
+def get_code(company_name):
+	connection = sqlite3.connect("master.db", check_same_thread=False)
+	cursor = connection.cursor()
+	cursor.execute("SELECT stock_code FROM stock WHERE stock_name=?", (company_name,))
+	try:
+		code = cursor.fetchone()[0]
+	except (IndexError,TypeError):
+		code = ["Sorry, no company exists with that name."]
+	cursor.close()
+	connection.close()
+	return code
 
 # Encrypt a plaintext string (password) with SHA-512 cryptographic hash function.
 def encrypt_password(password):

@@ -89,13 +89,9 @@
                         {% for line in response %}
                             {% if not "Sorry" in line %}
                                 {% if line.isupper() %}
-                                    {% set stock_id = ticker_symbol.ticker_symbol %}
-{#                                    {% print(stock_id) %}#}
-                                    {% set imgpath = "http://image.sinajs.cn/newchart/v5/usstock/min/"+ stock_id  + ".gif" %}
-{#                                    {% print(imgpath) %}#}
                                     <p style="font-size: 20px; color: black;"><b>Ticker symbol:</b> {{ line }}</p>
                                 {% else %}
-                                    <p style="font-size: 20px; color: red;"><b>Current stock price:</b> {{ line }}$</p>
+                                    <p style="font-size: 20px; color: red;"><b>Current stock price:</b> {{ line }}元</p>
                                 {% endif %}
                             {% else %}
                             <p style="font-size: 12px; color: red;">{{ line }}</p>
@@ -117,15 +113,17 @@
                         {% for line in response %}
 {#                            {% print(line) %}#}
                             {% if not "Sorry" in line %}
+                                {% if line.isupper() %}
                                 {% set stock_id = ticker_symbol.ticker_symbol %}
 {#                                    {% print(stock_id) %}#}
-                                {% set imgpath = "http://image.sinajs.cn/newchart/v5/usstock/min/"+ stock_id  + ".gif" %}
+                                {% set imgpath = "http://image.sinajs.cn/newchart/min/n/"+ stock_id  + ".gif" %}
 {#                                {% print(imgpath) %}#}
                                     <div align="right">
-                                        <button type="button" class="btn btn-success" onclick="changeImg_min('{{stock_id }}');">分时</button>
+                                        <button type="button" class="btn btn-success" onclick="changeImg_min('{{stock_id }}');">分</button>
                                         <button type="button" class="btn btn-success" onclick="changeImg_day('{{ stock_id }}');">日</button>
                                         <button type="button" class="btn btn-primary" onclick="changeImg_week('{{ stock_id }}');">周</button>
                                         <button type="button" class="btn btn-primary" onclick="changeImg_month('{{ stock_id }}');">月</button>
+                                        <button type="button" class="btn btn-primary" onclick="changeImg_year('{{ stock_id }}');">年</button>
                                     </div>
                                     <br />
 
@@ -133,6 +131,7 @@
     {#                                {% print(imgpath) %}#}
                                     <img alt="Stock Trend" src= {{ imgpath }} align="middle" id="chart">
                                     </tr>
+                                    {% endif %}
                                 {% endif %}
                         {% endfor %}
 
@@ -145,26 +144,31 @@
     <script>
     function changeImg_min(stockid) {
     var obj = document.getElementById("chart");
-    var url = "http://image.sinajs.cn/newchart/v5/usstock/min/" + stockid + ".gif"
+    var url = "http://image.sinajs.cn/newchart/min/n/" + stockid + ".gif"
     obj.setAttribute("src", url);
 }
 
 function changeImg_day(stockid) {
     var obj = document.getElementById("chart");
-    var url = "http://image.sinajs.cn/newchart/usstock/daily/"+stockid+".gif"
+    var url = "http://image.sinajs.cn/newchart/daily/n/"+stockid+".gif"
     obj.setAttribute("src", url);
-    console.log("done")
 }
 
 function changeImg_week(stockid) {
     var obj = document.getElementById("chart");
-    var url = "http://image.sinajs.cn/newchart/usstock/weekly/"+stockid+".gif"
+    var url = "http://image.sinajs.cn/newchart/weekly/n/"+stockid+".gif"
     obj.setAttribute("src", url);
 }
 
 function changeImg_month(stockid) {
     var obj = document.getElementById("chart");
-    var url = "http://image.sinajs.cn/newchart/usstock/monthly/"+stockid+".gif"
+    var url = "http://image.sinajs.cn/newchart/monthly/n/"+stockid+".gif"
+    obj.setAttribute("src", url);
+}
+
+function changeImg_year(stockid) {
+    var obj = document.getElementById("chart");
+    var url = "http://image2.sinajs.cn/newchart/macd/n/"+stockid+".gif"
     obj.setAttribute("src", url);
 }
     </script>

@@ -89,8 +89,8 @@
                         <div style="line-height: 6px;">
                         {% for line in response %}
                             {% if not "Sorry" in line %}
-                                {% if line.isupper() %}
-                                <p style="font-size: 20px; color: green;"><b>Ticker symbol:</b> {{ line }}</p>
+                                {% if line[0][:3].isdigit() %}
+                                <p style="font-size: 20px; color: green;"><b>Ticker symbol:</b> {{ line[-2:].lower()+line[:6] }}</p>
                                 {% else %}
                                 <p style="font-size: 20px; color: green;"><b>Company name:</b> {{ line }}</p>
                                 {% endif %}
