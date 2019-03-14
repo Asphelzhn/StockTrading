@@ -46,7 +46,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url_for('dashboard.show_quote') }}">
                                 <span data-feather="bar-chart-2"></span>
-                                Quote
+                                Price
                             </a>
                         </li>
                         <li class="nav-item">
@@ -83,19 +83,19 @@
 
                 <form class="form" method="POST">
                     <div class="text-center mb-4">
-                        <p>Enter a company name (e.g., Microsoft) to look up its corresponding ticker symbol.</p>
+                        <p>输入公司名称（如：平安银行）来查询对应股票代码</p>
 
                         {% if response %}
                         <div style="line-height: 6px;">
                         {% for line in response %}
-                            {% if not "Sorry" in line %}
+                            {% if not "Sorry" in line[0] %}
                                 {% if line[0][:3].isdigit() %}
                                 <p style="font-size: 20px; color: green;"><b>Ticker symbol:</b> {{ line[-2:].lower()+line[:6] }}</p>
                                 {% else %}
                                 <p style="font-size: 20px; color: green;"><b>Company name:</b> {{ line }}</p>
                                 {% endif %}
                             {% else %}
-                            <p style="font-size: 12px; color: red;">{{ line }}</p>
+                            <p style="font-size: 12px; color: red;">{{ line[0] }}</p>
                             {% endif %}
                         {% endfor %}
                         </div>

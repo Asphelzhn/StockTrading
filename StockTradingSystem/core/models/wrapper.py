@@ -19,7 +19,7 @@ def get_last_price(ticker_symbol):
 		response = requests.get(endpoint).text
 		print(response)
 		last_price = float(response.split(',')[3])
-	except (ValueError, KeyError):
+	except (IndexError, ValueError, KeyError, UnboundLocalError):
 		last_price = "exit"
 	return last_price
 

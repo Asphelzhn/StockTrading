@@ -45,7 +45,7 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="">
                                 <span data-feather="bar-chart-2"></span>
-                                Quote
+                                Price
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
@@ -77,12 +77,12 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Quote</h1>
+                    <h1 class="h2">Price</h1>
                 </div>
 
                 <form class="form" method="POST">
                     <div class="text-center mb-4">
-                        <p>Enter a ticker symbol (e.g., MSFT) to get a quote for its current stock price.</p>
+                        <p>输入股票代码（如：sz000001）来当前股票价格</p>
 
                         {% if response %}
                         <div style="line-height: 6px;">
@@ -106,7 +106,7 @@
                         <label for="input-ticker-symbol">Ticker Symbol</label>
                     </div>
             
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Get Quote</button>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Search</button>
 
                     <br />
                     {% if response %}

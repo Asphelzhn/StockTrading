@@ -46,7 +46,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url_for('dashboard.show_quote') }}">
                                 <span data-feather="bar-chart-2"></span>
-                                Quote
+                                Price
                             </a>
                         </li>
                         <li class="nav-item">
@@ -99,10 +99,12 @@
                             <h4 style="color: #e74c3c;">Navigate to the <a href="{{ url_for('dashboard.show_buy') }}">Buy menu</a> to execute a trade.</h4>
                         {% elif sell_portfolio == "empty" %}
                             {{ buy_portfolio | safe }}
-                            <br/><br/><br/><h4>Stock Sales</h4>
+                            <br/><br/><br/>
+                            <h4>Stock Sales</h4>
                             <h4 style="color: #e74c3c;">You have not sold any stock.</h4>
                         {% else %}
                             {{ buy_portfolio | safe }}
+                            <br/><br/><br/>
                             {{ sell_portfolio | safe }}
                         {% endif %}
                     </div>

@@ -45,7 +45,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url_for('dashboard.show_quote') }}">
                                 <span data-feather="bar-chart-2"></span>
-                                Quote
+                                Price
                             </a>
                         </li>
                         <li class="nav-item">
@@ -88,9 +88,9 @@
                 </div>
                 <div class="text-center">
                     <div style="line-height: 12px">
-                        <p><b>Liquid balance:</b> ${{ balance }}</p>
-                        <p><b>Estimated earnings in portfolio:</b> ${{ earnings }}</p>
-                        <p><b>Estimated total balance:</b> ${{ total }}</p>
+                        <p><b>Balance:</b> {{ balance }}元</p>
+                        <p><b>Estimated earnings in portfolio:</b> {{ earnings }}元</p>
+                        <p><b>Estimated total balance:</b> {{ total }}元</p>
                     </div>
                 </div>
                 <center>

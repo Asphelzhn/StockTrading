@@ -15,7 +15,7 @@ def get_code(company_name):
 	cursor.execute("SELECT stock_code FROM stock WHERE stock_name=?", (company_name,))
 	try:
 		code = cursor.fetchone()[0]
-	except (IndexError,TypeError):
+	except (ValueError, KeyError, UnboundLocalError,IndexError,TypeError):
 		code = ["Sorry, no company exists with that name."]
 	cursor.close()
 	connection.close()
